@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "/IA4qazrElQ=",
+  "success": true,
+  "projectFilePath": "/home/canosoft/Repositories/sl_comerciales/src/comerciales.WebApi/WebApi.csproj",
+  "expectedPackageFiles": [
+    "/home/canosoft/.nuget/packages/microsoft.aspnetcore.openapi/9.0.6/microsoft.aspnetcore.openapi.9.0.6.nupkg.sha512",
+    "/home/canosoft/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
