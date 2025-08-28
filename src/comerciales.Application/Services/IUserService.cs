@@ -1,3 +1,5 @@
+using comerciales.Application.DTOs;
+
 namespace comerciales.Application.Services;
 
 public interface IUserService
@@ -7,7 +9,7 @@ public interface IUserService
     /// </summary>
     /// <param name="email">Correo electrónico del usuario</param>
     /// <param name="password">Contraseña del usuario</param>
-    /// <returns>Token JWT si la autenticación es exitosa</returns>  
-    Task<string> AuthenticateAsync(string email, string password);
+    /// <returns>Objeto LoginResponseDto si la autenticación es exitosa</returns>
+    Task<LoginResponseDto> AuthenticateAsync(string email, string password);
 
 }

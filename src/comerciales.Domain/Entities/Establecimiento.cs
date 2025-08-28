@@ -1,10 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
 
 
 namespace comerciales.Domain.Entities;
 
 [Table("Establecimiento", Schema = "reg")]
+
 public partial class Establecimiento
 {
     [Key]
@@ -12,8 +15,9 @@ public partial class Establecimiento
 
     public int ComercianteId { get; set; }
 
+    [Required]
     [StringLength(200)]
-    public string NombreEstablecimiento { get; set; } = null!;
+    public string NombreEstablecimiento { get; set; }
 
     [Column(TypeName = "decimal(14, 2)")]
     public decimal Ingresos { get; set; }
@@ -26,9 +30,9 @@ public partial class Establecimiento
 
     [ForeignKey("ComercianteId")]
     [InverseProperty("Establecimientos")]
-    public virtual Comerciante Comerciante { get; set; } = null!;
+    public virtual Comerciante Comerciante { get; set; }
 
     [ForeignKey("UsuarioActualizacionId")]
     [InverseProperty("Establecimientos")]
-    public virtual Usuario UsuarioActualizacion { get; set; } = null!;
+    public virtual Usuario UsuarioActualizacion { get; set; }
 }
